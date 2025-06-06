@@ -7,18 +7,20 @@ import org.testng.annotations.BeforeMethod;
 
 	public class Baseclass {
 		
-		WebDriver driver;
-		public Baseclass()
+		public WebDriver driver;
+		
+		/*public Baseclass(WebDriver driver)
 		{
 			this.driver= driver;
-	}
+	}*/
 		@BeforeMethod
-		public void initalize()
+		public void initalize() throws InterruptedException
 		{
 		
 			driver =new ChromeDriver();
 			driver.get("https://demo.cyclos.org/ui/login");
 			driver.manage().window().maximize();
+			Thread.sleep(3000);
 		}
 		
 		@AfterMethod
@@ -26,10 +28,6 @@ import org.testng.annotations.BeforeMethod;
 		{
 			driver.quit();
 		}
-
-
-
-
 	}
 
 
