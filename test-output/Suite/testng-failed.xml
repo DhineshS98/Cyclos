@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Test.Login_TC_01">
+      <class name="Test.Pay_TC_03">
         <methods>
           <include name="initalize"/>
-          <include name="negativelogin"/>
+          <include name="test_crediting"/>
           <include name="exit"/>
         </methods>
-      </class> <!-- Test.Login_TC_01 -->
+      </class> <!-- Test.Pay_TC_03 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

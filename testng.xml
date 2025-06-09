@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite">
   <test thread-count="5" name="Test">
-    <classes>     
-      <class name="Test.Login_TC_01"/>
+    <classes>  
+       <class name="Test.Login_TC_01"/> 
+      <class name="Test.Pay_TC_02"/>
+      <class name="Test.Pay_TC_03"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

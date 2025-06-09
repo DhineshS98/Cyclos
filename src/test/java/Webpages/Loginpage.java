@@ -21,16 +21,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 			 driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
 			 Thread.sleep(3000);
 		 }
-		 public void invalidlogin() throws InterruptedException
+		 public String invalidlogin() throws InterruptedException
 		 {
 			 driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Dem1");
 			 driver.findElement(By.xpath("//input[@type='password']")).sendKeys("1214");
 			 driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
 			 Thread.sleep(5000);
-			 WebDriverWait wb=new WebDriverWait(driver,Duration.ofSeconds(10));
-			 wb.until(ExpectedConditions.alertIsPresent());
-			 String alertmsg=driver.switchTo().alert().getText();
+			 String alertmsg=driver.findElement(By.className("notification-message")).getText();
 			 System.out.println(alertmsg);
+			return alertmsg;
 		 }
 		
 
